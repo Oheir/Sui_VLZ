@@ -101,7 +101,7 @@ function App() {
             )
           ) : (
             <div className="text-center py-12">
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">Welcome to Counter App</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">Vote max</h2>
               <p className="text-gray-600">Please connect your wallet to get started</p>
             </div>
           )}

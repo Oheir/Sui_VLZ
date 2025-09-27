@@ -50,7 +50,7 @@ export function CreateCounter({
   return (
     <Card className="max-w-md mx-auto">
       <CardHeader>
-        <CardTitle className="text-gray-900">Create New Counter</CardTitle>
+        <CardTitle style={{color: '#D3C6AA'}}>Create New Counter</CardTitle>
         <CardDescription className="text-gray-600">
           Create a new counter that you can increment and reset. You'll be the owner of this counter.
         </CardDescription>
