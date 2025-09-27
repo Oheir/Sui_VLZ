@@ -75,16 +75,16 @@ export function CounterList({ onSelectCounter }: { onSelectCounter: (id: string)
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Find Existing Counters</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Join Existing Community</h2>
         <p className="text-gray-600 mb-6">
-          Search for existing counter objects by their Object ID
+          Search for an existing Community by their ID
         </p>
       </div>
 
       {/* Search by Object ID */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-gray-900">Search by Object ID</CardTitle>
+          <CardTitle className="text-gray-900">Search by Community ID</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="flex gap-2">

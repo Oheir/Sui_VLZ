@@ -17,9 +17,9 @@ import './ui_css/navbar.css';
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Counter",
+    title: "Forum1",
     href: "/counter",
-    description: "View and interact with the counter component.",
+    description: "Hackaton Forum",
   },
   {
     title: "Create Counter",
@@ -36,18 +36,18 @@ const components: { title: string; href: string; description: string }[] = [
 export default function Navbar() {
   return (
     <NavigationMenu >
-      <NavigationMenuList className="flex w-full justify-between items-center">
-        <div className="flex items-center space-x-6">
+      <NavigationMenuList className="navbar">
+        <div className="navbar">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/" className="flex items-center space-x-2 font-semibold text-lg text-gray-900">
+              <Link href="/" className="navbar-logo">
                 Shallot
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="forum">Forums</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="navbar-buttons">Forums</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-white">
                 <li className="row-span-3">

@@ -32,6 +32,12 @@ module counter::counter {
     counter.value = counter.value + 1;
   }
 
+ public entry fun decrement(counter: &mut Counter) {
+    assert!(counter.value > 0, 0); // Prevent underflow
+    counter.value = counter.value - 1;
+  }
+
+
   /// Set value (only runnable by the Counter owner)
   public fun set_value(counter: &mut Counter, value: u64, ctx: &TxContext) {
     assert!(counter.owner == tx_context::sender(ctx), 0);
