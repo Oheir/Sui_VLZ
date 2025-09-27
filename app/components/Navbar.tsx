@@ -13,7 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import { AlignJustify } from "lucide-react";
-import './ui_css/navbar.css';
+import './navbar.css';
 
 const components: { title: string; href: string; description: string }[] = [
   {
