@@ -12,12 +12,14 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
+import { AlignJustify } from "lucide-react";
+import './navbar.css';
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Counter",
+    title: "Forum1",
     href: "/counter",
-    description: "View and interact with the counter component.",
+    description: "Hackaton Forum",
   },
   {
     title: "Create Counter",
@@ -33,19 +35,19 @@ const components: { title: string; href: string; description: string }[] = [
 
 export default function Navbar() {
   return (
-    <NavigationMenu className="max-w-full justify-between p-4 bg-white border-b border-gray-200">
-      <NavigationMenuList className="flex w-full justify-between items-center">
-        <div className="flex items-center space-x-6">
+    <NavigationMenu >
+      <NavigationMenuList className="navbar">
+        <div className="navbar">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/" className="flex items-center space-x-2 font-semibold text-lg text-gray-900">
-                Counter App
+              <Link href="/" className="navbar-logo">
+                Shallot
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-gray-900">Features</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="navbar-buttons">Forums</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-white">
                 <li className="row-span-3">
@@ -78,12 +80,12 @@ export default function Navbar() {
 
           <NavigationMenuItem>
             <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-              <Link href="/" className="text-gray-900">Home</Link>
+              <Link href="/" className="current">Current</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </div>
 
-        <NavigationMenuItem className="flex ml-auto">
+        <NavigationMenuItem className="wallet">
           <ConnectButton />
         </NavigationMenuItem>
       </NavigationMenuList>
