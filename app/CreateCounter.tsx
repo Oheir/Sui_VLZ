@@ -1,6 +1,12 @@
 import { Transaction } from "@mysten/sui/transactions";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { useSignAndExecuteTransaction, useSuiClient } from "@mysten/dapp-kit";
 import { useNetworkVariable } from "./networkConfig";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -18,9 +24,8 @@ export function CreateCounter({
     isPending,
   } = useSignAndExecuteTransaction();
 
-
   function create() {
-    console.log('creating tx')
+    console.log("creating tx");
     const tx = new Transaction();
 
     tx.moveCall({
@@ -50,9 +55,9 @@ export function CreateCounter({
   return (
     <Card className="max-w-md mx-auto">
       <CardHeader>
-        <CardTitle style={{color: '#D3C6AA'}}>Create New Counter</CardTitle>
+        <CardTitle style={{ color: "#D3C6AA" }}>Create New Forum</CardTitle>
         <CardDescription className="text-gray-600">
-          Create a new counter that you can increment and reset. You'll be the owner of this counter.
+          Create a new Forum
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -64,7 +69,11 @@ export function CreateCounter({
           disabled={isSuccess || isPending}
           className="w-full text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
         >
-          {isSuccess || isPending ? <ClipLoader size={20} color="white" /> : "Create Counter"}
+          {isSuccess || isPending ? (
+            <ClipLoader size={20} color="white" />
+          ) : (
+            "Create Counter"
+          )}
         </Button>
       </CardContent>
     </Card>
