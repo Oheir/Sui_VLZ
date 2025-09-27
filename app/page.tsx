@@ -6,11 +6,9 @@ export default function Home() {
     <div className="page-background">
       <div className="container">
         <div className="header-text">
-          <h1 className="title">Welcome to Counter App</h1>
+          <h1 className="title">Welcome to Shallot</h1>
           <p className="subtitle">
-            A beautiful and modern counter application built with Next.js,
-            Tailwind CSS, and shadcn/ui components.
-          </p>
+            Here you can vote and create polls for the community, freely and anonimously          </p>
         </div>
 
         <div className="app-wrapper">

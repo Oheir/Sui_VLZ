@@ -71,12 +71,7 @@ export default function Navbar() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          
         </div>
-
-        <NavigationMenuItem className="wallet">
-          <ConnectButton />
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
