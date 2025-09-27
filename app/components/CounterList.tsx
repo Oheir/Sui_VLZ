@@ -3,6 +3,7 @@ import { SuiClient, getFullnodeUrl } from '@mysten/sui/client';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import './counterlist.css';
 
 interface CounterData {
   objectId: string;
@@ -73,88 +74,67 @@ export function CounterList({ onSelectCounter }: { onSelectCounter: (id: string)
   };
 
   return (
-    <div className="space-y-6">
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Join Existing Community</h2>
-        <p className="text-gray-600 mb-6">
-          Search for an existing Community by their ID
-        </p>
+    <div className="counter-list">
+      <div className="counter-list-header">
+        <h2 className="counter-list-title">Join Existing Community</h2>
+        <p className="counter-list-subtitle">Search for an existing Community by their ID</p>
       </div>
 
       {/* Search by Object ID */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-gray-900">Search by Community ID</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex gap-2">
+      <div className="card">
+        <div className="card-header">
+          <h3 className="card-title">Search by Community ID</h3>
+        </div>
+        <div className="card-content">
+          <div className="input-group">
             <input
               type="text"
               placeholder="Enter counter object ID (0x...)"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900"
+              className="input-text"
             />
-            <Button 
+            <button
               onClick={searchCounters}
               disabled={isSearching}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="button button-primary"
             >
               {isSearching ? "Searching..." : "Search"}
-            </Button>
+            </button>
           </div>
-          {error && (
-            <p className="text-red-600 text-sm mt-2">{error}</p>
-          )}
-        </CardContent>
-      </Card>
+          {error && <p className="error-text">{error}</p>}
+        </div>
+      </div>
 
       {/* Search Results */}
       {searchResults.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-gray-900">
-              Search Results ({searchResults.length})
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {searchResults.map((counter) => (
-                <div key={counter.objectId} className="flex items-center justify-between p-4 border border-gray-200 rounded-lg bg-gray-50">
-                  <div>
-                    <p className="font-semibold text-gray-900">Counter Value: {counter.value}</p>
-                    <p className="text-sm text-gray-600">Owner: {counter.owner.slice(0, 8)}...{counter.owner.slice(-8)}</p>
-                    <p className="text-xs text-gray-500">ID: {counter.objectId.slice(0, 8)}...{counter.objectId.slice(-8)}</p>
-                  </div>
-                  <Button 
-                    onClick={() => onSelectCounter(counter.objectId)}
-                    size="sm"
-                    className="bg-green-600 hover:bg-green-700 text-white"
-                  >
-                    Select Counter
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Instructions */}
-      <Card>
-        <CardContent className="pt-6">
-          <div className="text-sm text-gray-600">
-            <h3 className="font-semibold mb-2 text-gray-900">How to find counter object IDs:</h3>
-            <ul className="list-disc list-inside space-y-1">
-              <li>Create a counter first to get its object ID</li>
-              <li>Copy the object ID from the URL hash after creating a counter</li>
-              <li>Or check the Sui Explorer for your package transactions</li>
-              <li>Look for objects of type: <code className="bg-gray-100 px-1 rounded text-gray-800">Counter</code></li>
-              <li>Object IDs are 66 characters long and start with "0x"</li>
-            </ul>
+        <div className="card">
+          <div className="card-header">
+            <h3 className="card-title">Search Results ({searchResults.length})</h3>
           </div>
-        </CardContent>
-      </Card>
+          <div className="card-content search-results-list">
+            {searchResults.map((counter) => (
+              <div key={counter.objectId} className="result-item">
+                <div className="result-details">
+                  <p className="result-title">Counter Value: {counter.value}</p>
+                  <p className="result-owner">
+                    Owner: {counter.owner.slice(0, 8)}...{counter.owner.slice(-8)}
+                  </p>
+                  <p className="result-id">
+                    ID: {counter.objectId.slice(0, 8)}...{counter.objectId.slice(-8)}
+                  </p>
+                </div>
+                <button
+                  onClick={() => onSelectCounter(counter.objectId)}
+                  className="button button-success"
+                >
+                  Select Counter
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
