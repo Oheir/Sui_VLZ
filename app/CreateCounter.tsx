@@ -56,10 +56,8 @@ export function CreateCounter({
   return (
   <Card className="container">
   <CardHeader>
-    <CardTitle style={{ color: "#D3C6AA" }}>Create New Forum</CardTitle>
-    <CardDescription className="description">
-      Create a new Forum
-    </CardDescription>
+    <CardTitle style={{ color: "#e6c384" ,fontSize : "2rem"}}>Create New Forum</CardTitle>
+
   </CardHeader>
   <CardContent>
     <Button
