@@ -39,9 +39,7 @@ export default function Navbar() {
         <div className="navbar">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/" className="navbar-logo">
-                Shallot
-              </Link>
+              <img src="/shallot_logo_exp.svg" alt="Shallot Logo" />
             </NavigationMenuLink>
           </NavigationMenuItem>
 
