@@ -1,5 +1,7 @@
 import App from "./App/App";
 import "./Page.css"; // import the CSS file
+import Poll from "./poll_/poll.tsx"
+import ForumApp from "./forum_/forum.tsx"
 
 export default function Home() {
   return (
@@ -12,7 +14,7 @@ export default function Home() {
         </div>
 
         <div className="app-wrapper">
-          <App />
+          <Poll/>
         </div>
       </div>
     </div>
