@@ -2,7 +2,7 @@
 
 ## Description
 
-Shallot is a SUI based decentrelized and anonymous voting system. It's main functionnalities are the creation of forums and polls by the users. 
+Shallot is a decentralized and anonymous voting platform built on the SUI blockchain. It allows users to create forums and polls, ensuring privacy and trustless participation through blockchain technology.
 
 ## How to use (windows)
 
