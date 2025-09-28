@@ -53,8 +53,7 @@ const PollSimpleApp: React.FC = () => {
       try {
         // TODO: Replace with RPC or indexer call for shared Poll objects
         setPolls([
-          { id: "0xPOLL1", owner: "0xOWNER1", question: "Adopt Proposal A?", yes_votes: 5, no_votes: 2 },
-          { id: "0xPOLL2", owner: "0xOWNER2", question: "Switch to new system?", yes_votes: 2, no_votes: 8 },
+          { id: "0xPOL", owner: "0xOWN1", question: "Yes?", yes_votes: 0, no_votes: 0 },
         ]);
       } catch (e) {
         setError("Failed to fetch polls.");
@@ -180,16 +179,7 @@ const PollSimpleApp: React.FC = () => {
 
   return (
     <div style={{ margin: "0 auto", padding: 32 }}>
-      <h1>Simple Polls</h1>
-      {!address ? (
-        <ConnectButton/>
-      ) : (
-        <div>
-          Connected: <b>{address}</b>
-        </div>
-      )}
-
-      <h2>Create Poll</h2>
+      <h1>Create Poll</h1>
       <input
         type="text"
         value={question}

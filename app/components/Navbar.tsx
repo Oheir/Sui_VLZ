@@ -42,39 +42,9 @@ export default function Navbar() {
               <img
                 src="/shallot_logo_exp.svg"
                 alt="Shallot Logo"
-                style={{ height: "2.4rem", width: "auto" }}
+                style={{ height: "5rem", width: "auto" }}
               />
             </NavigationMenuLink>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavigationMenuTrigger className="navbar-buttons">
-              Forums
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="dropdown-list">
-                <li className="dropdown-card">
-                  <NavigationMenuLink asChild>
-                    <Link href="/" className="counter-card">
-                      <div className="title">Counter App</div>
-                      <p className="description">
-                        A beautiful counter application built with Next.js and
-                        Tailwind CSS.
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
           </NavigationMenuItem>
         </div>
       </NavigationMenuList>
