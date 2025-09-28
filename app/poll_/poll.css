@@ -1,0 +1,100 @@
+:root {
+  --ef-bg: #2B3339;
+  --ef-surface: #323C41;
+  --ef-fg: #D3C6AA;
+  --ef-accent-green: #9DCF99;
+  --ef-accent-blue: #7FB4CA;
+  --ef-accent-pink: #D699B6;
+  --ef-muted: #5C6A72;
+  --ef-hover-bg: #3C474D;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--ef-bg);
+  color: var(--ef-fg);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--ef-surface);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Headings */
+h2, h3, h4 {
+  color: var(--ef-accent-pink);
+  margin-bottom: 1rem;
+}
+
+/* Poll list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: var(--ef-hover-bg);
+  border: 1px solid var(--ef-muted);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons */
+button {
+  background-color: transparent;
+  color: var(--ef-accent-green);
+  border: 1px solid var(--ef-muted);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--ef-hover-bg);
+}
+
+button:disabled {
+  background-color: var(--ef-muted);
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Vote button (Yes/No choice) */
+input[type="radio"] {
+  accent-color: var(--ef-accent-blue);
+  margin-right: 0.5rem;
+}
+
+/* Vote section */
+label {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+/* Connected wallet */
+.connected-wallet {
+  color: var(--ef-accent-blue);
+  margin-bottom: 1rem;
+}
+
+/* Error messages */
+.error {
+  color: #f26d78;
+  margin-top: 1rem;
+}
+
+/* Success message */
+.success {
+  color: var(--ef-accent-green);
+  margin-top: 1rem;
+}
