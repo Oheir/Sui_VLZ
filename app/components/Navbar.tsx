@@ -12,7 +12,7 @@ import {
   NavigationMenuTrigger,
 } from "./ui/navigation-menu";
 import { AlignJustify } from "lucide-react";
-import './navbar.css';
+import "./navbar.css";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -39,14 +39,14 @@ export default function Navbar() {
         <div className="navbar">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/" className="navbar-logo">
-                Shallot
-              </Link>
+              <img src="/shallot_logo_exp.svg" alt="Shallot Logo" style={{ height: '2.4rem', width: 'auto' }} />
             </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="navbar-buttons">Forums</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="navbar-buttons">
+              Forums
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="dropdown-list">
                 <li className="dropdown-card">
@@ -54,7 +54,8 @@ export default function Navbar() {
                     <Link href="/" className="counter-card">
                       <div className="title">Counter App</div>
                       <p className="description">
-                        A beautiful counter application built with Next.js and Tailwind CSS.
+                        A beautiful counter application built with Next.js and
+                        Tailwind CSS.
                       </p>
                     </Link>
                   </NavigationMenuLink>
@@ -84,11 +85,7 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={`list-item ${className}`}
-          {...props}
-        >
+        <a ref={ref} className={`list-item ${className}`} {...props}>
           <div className="title">{title}</div>
           <p className="description">{children}</p>
         </a>

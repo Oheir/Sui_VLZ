@@ -76,7 +76,7 @@ export function CounterList({ onSelectCounter }: { onSelectCounter: (id: string)
   return (
     <div className="counter-list">
       <div className="counter-list-header">
-        <h2 className="counter-list-title">Join Existing Community</h2>
+        <h2 className="counter-list-title">Join Existing Community </h2>
         <p className="counter-list-subtitle">Search for an existing Community by their ID</p>
       </div>
 
