@@ -15,6 +15,7 @@ export default function Home() {
 
         <div className="app-wrapper">
           <Poll/>
+          <ForumApp/>
         </div>
       </div>
     </div>
