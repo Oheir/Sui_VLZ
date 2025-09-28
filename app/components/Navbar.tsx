@@ -39,7 +39,11 @@ export default function Navbar() {
         <div className="navbar">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <img src="/shallot_logo_exp.svg" alt="Shallot Logo" style={{ height: '2.4rem', width: 'auto' }} />
+              <img
+                src="/shallot_logo_exp.svg"
+                alt="Shallot Logo"
+                style={{ height: "2.4rem", width: "auto" }}
+              />
             </NavigationMenuLink>
           </NavigationMenuItem>
 
