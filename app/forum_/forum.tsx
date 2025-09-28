@@ -57,22 +57,13 @@ const ForumApp: React.FC = () => {
         // TODO: Replace with Sui RPC/indexer call for shared Forum objects
         setForums([
           {
-            id: "0xFORUM1",
+            id: "0xFOR1",
             name: "Privacy Community",
-            description: "Discuss privacy proposals",
-            creator: "0xOWNER1",
-            member_count: 10,
-            active_poll: "0xPOLL1",
+            description: "Discuss",
+            creator: "0xOWN1",
+            member_count: 2,
+            active_poll: "0xPOL1",
             created_at: Date.now() - 86400000,
-          },
-          {
-            id: "0xFORUM2",
-            name: "Tech Governance",
-            description: "Tech policy debates",
-            creator: "0xOWNER2",
-            member_count: 16,
-            active_poll: null,
-            created_at: Date.now() - 604800000,
           },
         ]);
       } catch (e) {
@@ -129,7 +120,7 @@ const ForumApp: React.FC = () => {
   }
 
   return (
-    <div style={{ maxWidth: 500, margin: "0 auto", padding: 32 }}>
+    <div style={{ margin: "0 auto", padding: 32 }}>
       <h1>Shallot Forums</h1>
       {!address ? (
         <ConnectButton/>

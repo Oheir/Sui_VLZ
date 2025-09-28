@@ -14,8 +14,10 @@ export default function Home() {
         </div>
 
         <div className="app-wrapper">
-          <Poll/>
           <ForumApp/>
+        </div>
+        <div className="app-wrapper">
+          <Poll/>
         </div>
       </div>
     </div>
